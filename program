@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main(int argc, char *argv[]) {
+	int mas[3][3],i, j  ;
+	for ( i = 0;i>3;i++){
+	
+		for ( j = 0;j>3;j++){
+			
+			mas[i][j] = scanf("%lf");
+		}
+	}
+	return 0;
+}
