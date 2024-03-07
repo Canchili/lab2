@@ -4,22 +4,77 @@
 
 
 int main(int argc, char *argv[]) {
-	int mas[3][3] = {},i,j,smas[2][2] = {},sum = 0 ;
-	
+	double mas[3][3] ,sumgd = 0,sumpd = 0 ;
+	int i, j,smas[2][2],skmas[2][2] ;
 	printf("vvedite znach\n");
 	for ( i = 0;i<3;i++)
 	{
 		for ( j = 0;j<3;j++)
 		{
-			scanf("%d", &mas);
+			printf("mas[%d][%d]",i+1,j+1);
+			scanf("%lf", &mas[i][j]);
 			
 		}
 	}
-		
-	printf("mas = %d\n",mas);
+	
+	//vivod
+	for ( i = 0;i<3;i++)
+	{
+		for ( j = 0;j<3;j++)
+		{
+			printf("%fl ", mas[i][j]);
+			
+		}
+		printf("\n");
+	}
+	
+	for (i = 0; i < 3;i++)
+	{
+		sumgd += mas[1][1];
+		sumpd += mas[1][3-i-1];  
+	}
+	printf("sumgd = %fl\n",sumgd);
+	printf("sumpd = %fl\n",sumpd);
 	
 	
+	printf("vvedite znach\n");
+	for ( i = 0;i<2;i++)
+	{
+		for ( j = 0;j<2;j++)
+		{
+			printf("smas[%d][%d]",i+1,j+1);
+			scanf("%d", &smas[i][j]);
+			
+		}
+	}
+	for ( i = 0;i<2;i++)
+	{
+		for ( j = 0;j<2;j++)
+		{
+			printf("%d ", smas[i][j]);
+			
+		}
+		printf("\n");
+	}
+	for ( i = 0;i<2;i++)
+	{
+		for ( j = 0;j<2;j++)
+		{
+			
+			skmas[i][j] = smas[i][j] * smas[i][j];	
+		}
+	}
+	printf("Kvadrat matrici\n");
+	for ( i = 0;i<2;i++)
+	{
+		for ( j = 0;j<2;j++)
+		{
+			printf("%d ", skmas[i][j]);
+			
+		}
+		printf("\n");
+	}
 	return 0;	
 	
-}	
+}
 	
